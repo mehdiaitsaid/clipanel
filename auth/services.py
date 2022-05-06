@@ -4,14 +4,15 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import uuid
 import jwt
 from .models import User,db
+from hooks import before_app_init
 
-
-def setup():
+@before_app_init.connect
+def setup(app, **kwargs):
+    print('---------- ---------------------------- setup-auth')
     db.create_all()
 
 def add_user(first_name, last_name,password,email):
     hashed_password = generate_password_hash(password)
-
     new_user = User(id=str(uuid.uuid4()),
                            first_name=first_name,
                            last_name=last_name,
