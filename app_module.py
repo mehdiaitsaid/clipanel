@@ -1,6 +1,7 @@
 import auth
 import cmd
 import modules.files
+import click
 
 from flask import current_app as app
 
