@@ -40,8 +40,10 @@ def test(current_user):
 """
 
 
-# python3 -m venv venv 
+# clone repo and delete venv folder 
+# python -m venv venv 
 # . venv/bin/activate 
+# pip install -r requirements.txt
  
 https://www.the-analytics.club/python-shell-commands 
 https://geekflare.com/securing-flask-api-with-jwt/
