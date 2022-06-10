@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
 
-
 app = Flask(__name__)
 CORS(app)
 
@@ -15,6 +14,8 @@ with app.app_context():
     from auth import auth_required
     from hooks import setup
     setup()
+
+
 
 
 
@@ -37,7 +38,10 @@ def test(current_user):
 
 
 """
- . venv/bin/activate 
+
+
+# python3 -m venv venv 
+# . venv/bin/activate 
  
 https://www.the-analytics.club/python-shell-commands 
 https://geekflare.com/securing-flask-api-with-jwt/
