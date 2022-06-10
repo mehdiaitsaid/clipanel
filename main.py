@@ -1,36 +1,44 @@
-from flask import Flask, jsonify
-import uuid
-
+from flask import Flask
+from flask_cors import CORS
 
 
 app = Flask(__name__)
+CORS(app)
 
-# import modules.files.blueprints.ftp.services as ftp
-#
-#
-# auth.setup()
-# ftp.setup()
 
-import app_module
-from hooks import setup
-setup()
 
-@app.route("/")
-def hello_world():
+
+
+with app.app_context():
+    print('-'*20 + 'Initializing' + '-' * 20 )
+    import app_module
+    from auth import auth_required
+    from hooks import setup
     setup()
-    # auth.add_user('test','ait','root','roo@email.com')
-    # admin = User(username='admin', email='admin@example.com')
-    # guest = User(username='guest', email='guest@example.com')
-    # db.session.add(admin)
-    # db.session.add(guest)
-    # db.session.commit()
-    return str(uuid.uuid4())
+
+
+
+
+@app.route('/')
+def hello_world():
+
+    return 'home'
+
+
+@app.route('/test')
+@auth_required
+def test(current_user):
+    # setup()
+
+    return current_user.id
 
 
 
 
 """
  . venv/bin/activate 
+ 
+https://www.the-analytics.club/python-shell-commands 
 https://geekflare.com/securing-flask-api-with-jwt/
 https://medium.com/analytics-vidhya/server-validation-in-flask-api-with-json-schema-963aa05e305f
 https://www.digitalocean.com/community/tutorials/how-to-use-flask-sqlalchemy-to-interact-with-databases-in-a-flask-application

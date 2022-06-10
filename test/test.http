@@ -1,4 +1,31 @@
-GET http://127.0.0.1:5000
+POST http://127.0.0.1:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "roo@email.com",
+  "password": "root"
+}
+
+###
+
+POST http://127.0.0.1:5000/files/files-explore/make-folder
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjcwYjljMmQwLTljNGYtNGNjOS1iYzA1LWViMzkwYjA2NTZiZSIsImV4cCI6MTY1NDgyMTI0NH0.zZukw_r81B1_CHBi6Q3fCY0FsgXNzdjpjCDHqEFkerA
+Content-Type: application/json
+
+{
+  "name": "Oden"
+}
+
+###
+GET http://127.0.0.1:5000/cmd/test
 Accept: application/json
 
 ###
+
+
+GET http://127.0.0.1:5000/test
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjcwYjljMmQwLTljNGYtNGNjOS1iYzA1LWViMzkwYjA2NTZiZSIsImV4cCI6MTY1MTk1MTMyNH0._lZBAwBj6JyG2ZaeiXDx9rFvaZ_jrq4Wa2J2Tr3yl6g
+
+###
+
+
