@@ -38,7 +38,7 @@ def test(current_user):
 
 
 """
-
+test
 
 # clone repo and delete venv folder 
 # python -m venv venv 

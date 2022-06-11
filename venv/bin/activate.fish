@@ -30,7 +30,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/mnt/c/Users/Mehdi/Projets/ngcloud/clipanel/backend/venv"
+set -gx VIRTUAL_ENV "/mnt/c/Users/Mehdi/Desktop/clipanel-1/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
