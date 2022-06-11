@@ -45,10 +45,5 @@ def test(current_user):
 # . venv/bin/activate 
 # pip install -r requirements.txt
  
-https://www.the-analytics.club/python-shell-commands 
-https://geekflare.com/securing-flask-api-with-jwt/
-https://medium.com/analytics-vidhya/server-validation-in-flask-api-with-json-schema-963aa05e305f
-https://www.digitalocean.com/community/tutorials/how-to-use-flask-sqlalchemy-to-interact-with-databases-in-a-flask-application
 
-https://stackoverflow.com/questions/1057431/how-to-load-all-modules-in-a-folder
 """
